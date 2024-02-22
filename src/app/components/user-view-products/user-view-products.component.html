@@ -1,0 +1,80 @@
+<!-- show following div if number of products > 0 else show norecords template present at the bottom-->
+<div>
+
+  <!-- show if logged in user type is 'farmers'-->
+  <div class="iterate-list">
+    
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Price per unit</th>
+        <th>Stock</th>
+        <th>Status</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      <!-- iterate the products array -->
+      <tr>
+        <td><!-- 'product name' --></td>
+        <td><!-- 'price per unit' / 'unit' --></td>
+        <td><!-- 'product stock' --></td>
+        <td>
+          <!--
+            if stock > 0 show 'In Stock' and bind class name 'text-success' to td element
+            else show 'Out of stock' and bind class name 'text-danger' to td element
+          -->
+        </td>
+        <td>
+          <!-- On clicking button, should call the 'getUpdateForm' fn with current product details -->
+          <button class="btn btn-info">Edit</button>
+        </td>
+        <td>
+          <!-- On clicking button, should call the 'deleteProduct' fn with current product details -->
+          <button class="btn btn-info">Remove Product</button>
+        </td>
+      </tr>
+    </table>
+    
+  </div>
+  
+  <!-- show if logged in user type is 'customers'-->
+  <div class="products">
+    
+    <!-- iterate the products -->
+    <div style="margin: 5px;" id="product-data">
+      <div class="product-card">
+        <img src="../../../assets/basket-full-vegetables.jpg" alt="Denim Jeans" width="100%">
+        <h2><!-- 'product name' --></h2>
+        <p class="price"><!-- 'price per unit' / 'unit' --></p>
+        <div>
+          <table>
+            <tr>
+              <td>
+                <!--
+                  if stock > 0 show 'In Stock' and bind class name 'text-success' to td element
+                  else show 'Out of stock' and bind class name 'text-danger' to td element
+                -->
+              </td>
+              <td>
+                <!-- On changing the input field should set the value : 'quantity' in component data -->                
+                Qty<input type="number" value="1" name="quantity"
+                  style="margin-left:10px;width: 30%; border-radius: 5px;"></td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          <!-- On clicking button, should call the 'buyProduct' fn with current product details -->
+          <button>Buy Now</button>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<ng-template #norecords>
+  <div class="text-danger ml-5">
+    *No records found
+  </div>
+</ng-template>

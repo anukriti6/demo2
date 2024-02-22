@@ -1,0 +1,68 @@
+{
+  "farmers": [
+    {
+      "id": 1,
+      "name": "farmer one",
+      "mobile": "6666666666",
+      "email": "farmerone@ffs.com",
+      "address": "xxx yyy zzz",
+      "password": "Farmer#1",
+      "userType": "farmers"
+    },
+    {
+      "id": 2,
+      "name": "farmer two",
+      "mobile": "7777777777",
+      "email": "farmertwo@ffs.com",
+      "address": "xxx yyy zzz",
+      "password": "Farmer#2",
+      "userType": "farmers"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "customer one",
+      "mobile": "9999999999",
+      "email": "customerone@ffs.com",
+      "address": "xxx yyy zzz",
+      "password": "Customer#1",
+      "userType": "customers"
+    },
+    {
+      "id": 2,
+      "name": "customer two",
+      "mobile": "6000000000",
+      "email": "customertwo@ffs.com",
+      "address": "xxx yyy zzz",
+      "password": "Customer#2",
+      "userType": "customers"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "unit": "count",
+      "pricePerUnit": 25,
+      "name": "Plantain Stem",
+      "stock": 120,
+      "belongsTo": 1
+    },
+    {
+      "id": 2,
+      "unit":"kg",
+      "pricePerUnit":120,
+      "name":"Polished Rice",
+      "stock":50,
+      "belongsTo": 1
+    },
+    {
+      "id": 3,
+      "name": "Coconut",
+      "unit": "count",
+      "stock": 0,
+      "pricePerUnit": 15,
+      "belongsTo": 2
+    }
+  ]
+}

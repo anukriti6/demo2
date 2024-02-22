@@ -1,0 +1,36 @@
+<div class="top-center">
+  <span class="form-info" id="user-type">
+    <!-- display title based on user type, format => "{user type in titlecase} Login"-->
+  </span>
+</div>
+
+<!-- login dropdown menu -->
+<app-user-menu [menus]="menus"></app-user-menu>
+
+<div class="form-card">
+  <div class="title">Sign In</div>
+  <form [formGroup]="loginForm">
+    <div class="form-group">
+      <!-- 'email' -->
+      <input type="email" placeholder="Email" class="form-control" id="input-email">
+      <div class="text-danger small" id="invalid-email">
+        
+        <!-- validation messages for email -->
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <!-- on click should toggle between input field between text and password to show and hide password-->
+      <span id="eye" class="eye"><i class="fa fa-eye icon"></i></span>
+      <!-- 'password' -->
+      <input placeholder="Password" class="form-control pwd-field" style="width: 91.3%;" id="input-password">
+      <div class="text-danger small" id="invalid-password">
+        
+        <!-- validation messages for password -->
+
+      </div>
+    </div>
+    <!-- On clicking button, should call the 'loginUser' fn and button should be disabled id form inputs are not valid -->
+    <button class="btn btn-info btn-submit" id="login-btn">Login</button>
+  </form>
+</div>

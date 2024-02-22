@@ -1,0 +1,47 @@
+<div class="top-right">
+  <!-- on click should route to farmers home page -->
+  <span class="routes" id="back-link">Back To Home</span>
+</div>
+
+<div class="form-card">
+  <div class="title">Add/Update Products</div>
+  <form [formGroup]="saveProductForm">
+    <div class="form-group">
+      <!-- 'name' -->
+      <input type="text" placeholder="Name" class="form-control" id="input-name">
+      <div class="text-danger small" id="invalid-name">
+        
+        <!--  validation message for name -->
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <span style="margin: 0 15px">Unit</span>
+      <!-- 'unit' -->
+      <input type="radio" value="kg" placeholder="Unit" id="input-kg">kg
+      <input type="radio" value="count" placeholder="Unit" id="input-count">count
+      <input type="radio" value="ton" placeholder="Unit" id="input-ton">ton
+    </div>
+    <div class="form-group">
+      <!-- 'stock' -->
+      <input type="number" placeholder="Stock" class="form-control" id="input-stock">
+      <div class="text-danger small" id="invalid-stock">
+        
+        <!--  validation message for stock -->
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <!-- 'pricePerUnit' -->
+      <input type="number" placeholder="Price Per Unit" class="form-control"
+      id="input-price">
+      <div class="text-danger small" id="invalid-price">
+        
+        <!--  validation message for price -->
+
+      </div>
+    </div>
+    <!-- On clicking button, should call the 'saveProduct' fn and button should be disabled for form inputs are not valid -->
+    <button class="btn btn-info btn-submit" id="save-btn">Save</button>
+  </form>
+</div>
